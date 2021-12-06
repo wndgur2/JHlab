@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reptopia Sign up</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <p><%= messege %></p>
+
+    <form action="/signup" method="post">
+        <label for="id">ID</label>
+        <br>
+        <input type="id" class="form-control" id="id" placeholder="enter id" name="id" required>
+        <br><br>
+        <label for="pw">Password</label>
+        <br>
+        <input type="text" class="form-control" id="pw" placeholder="enter password" name="pw" required>
+        <br>
+        <br>
+        <input type="submit" value="Sign up"></input>
+    </form>
+  </body>
+</html>
