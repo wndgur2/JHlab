@@ -33,7 +33,7 @@ const dbURL = "mongodb+srv://tempUser:temp123@cluster0.f5csc.mongodb.net/userDat
 const port = process.env.PORT || 3000;
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000, (res)=>console.log("server connected.")))
+  .then(result => app.listen(port, (res)=>console.log("server connected.")))
   .catch(err => console.log(err));
 
 app.use('/', indexRouter);
