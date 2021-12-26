@@ -7,9 +7,8 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var musicRouter = require('./routes/music');
 var reptopiaRouter = require('./routes/reptopia');
-var aiRouter = require('./routes/ai');
 var algorithmRouter = require('./routes/algorithm');
 var signinRouter = require('./routes/signin');
 var signupRouter = require('./routes/signup');
@@ -37,9 +36,8 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/music', musicRouter);
 app.use('/algorithm', algorithmRouter);
-app.use('/ai', aiRouter);
 app.use('/reptopia', reptopiaRouter);
 app.use('/signin', signinRouter);
 app.use('/signup', signupRouter);
@@ -70,7 +68,7 @@ app.post('/signin', (req, res) => {
       console.log('logged:', result);
       if(result.length!=0){
           user = result[0];
-          res.render('index');
+          res.redirect('/');
       }
       else{
           res.render('signin', {messege: "Id, password error."});
