@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var musicRouter = require('./routes/music');
 var reptopiaRouter = require('./routes/reptopia');
 var algorithmRouter = require('./routes/algorithm');
-var signinRouter = require('./routes/signin');
+var signinRouter = require('./routes/contact');
 var signupRouter = require('./routes/signup');
 
 const app = express();
@@ -39,7 +39,7 @@ app.use('/', indexRouter);
 app.use('/music', musicRouter);
 app.use('/algorithm', algorithmRouter);
 app.use('/reptopia', reptopiaRouter);
-app.use('/signin', signinRouter);
+app.use('/contact', signinRouter);
 app.use('/signup', signupRouter);
 
 
@@ -53,7 +53,7 @@ app.post('/signup', (req, res) => {
     else{
       newUser.save()
         .then(result => {
-            res.redirect('/signin');
+            res.redirect('/contact');
         })
         .catch(err => {
             console.log(err);
@@ -71,12 +71,12 @@ app.post('/signin', (req, res) => {
           res.redirect('/');
       }
       else{
-          res.render('signin', {messege: "Id, password error."});
+          res.render('contact', {messege: "Id, password error.", category:"contact"});
       }
   })
   .catch(err => {
       console.log(err);
-      res.redirect('/signin');
+      res.redirect('/contact');
   });
 });
 

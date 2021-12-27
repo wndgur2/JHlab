@@ -9,14 +9,7 @@ body {
   text-align: center;
 }
 .mainheading {
-	padding:1rem 0rem;
-}
-a {
-	color:#00ab6b;
-}
-a,a:hover {
-	transition:all 0.2s;
-  color:#00ab6b;
+	padding: 1rem 0rem;
 }
 .mediumnavigation {
 	background:rgba(255,255,255,.97);
@@ -24,8 +17,8 @@ a,a:hover {
 }
 @media (min-width:992px) {
 	.navbar-toggleable-md .navbar-nav .nav-link {
-		padding-right:.7rem;
-		padding-left:.7rem;
+		padding-right:.2rem;
+		padding-left:.2rem;
 	}
 }
 .footer {
@@ -85,15 +78,83 @@ a,a:hover {
 }
 
 .photo{
-  padding: 10px 5px;
+  margin: 25px 20px;
   max-width:12%;
   max-height:12%;
   width: auto;
   height: auto;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
-
 .photo:hover{
   max-width:20%;
   max-height:20%;
+}
+
+audio::-webkit-media-controls-panel{
+
+  transition: 0.8s ease-in-out;
+}
+audio::-webkit-media-controls-panel:hover{
+  background-color: #65ee9e;
+  transition: 0.8s ease-in-out;
+}
+
+.music{
+  margin: 25px 20px;
+  max-width:10%;
+  max-height:10%;
+  transition: 0.8s ease-in-out;
+}
+.music:hover{
+  max-width:30%;
+  max-height:30%;
+}
+input, input:focus{
+  background-color: #caf7e6;
+  border-width:0px;
+  outline: none;
+  margin-right: 7%;
+}
+.contents{
+  padding: 1rem 0rem;
+}
+.form{
+  width:20%;
+}
+.index{
+  position: relative;
+  width: 5%;
+  text-align: left;
+}
+a, a:hover{
+  color:#00ab6b;
+  text-decoration: none;
+  margin: 0rem 0.5rem;
+}
+.sign, .sign:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#00ab6b;
+  color:#dbffea;
+  border-radius: 3rem;
+  border-width: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: large;
+  margin: 0px 15px;
+  vertical-align: text-top;
+  
+  top: auto;
+  width: 100%;
+  border-spacing: 3rem;
+  height: 3rem;
+  padding: 0rem 0rem ;
+}
+.signs{
+  padding: 0rem 0rem;
+  margin: 0rem 0rem;
+  align-items: center;
+  display: flex;
+  width: 10%;
 }

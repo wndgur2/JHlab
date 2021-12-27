@@ -1,0 +1,36 @@
+<%- include("./partition/head")%>
+
+<div class="mainheading">
+  <h1 class="sitetitle">Contact</h1>
+  <p class="lead">
+    <%= messege %>
+  </p>
+</div>
+
+<form action="/signin" method="post">
+  <br>
+  <dir style="margin: 10px 0px;">
+    <label for="id" class="index">ID</label>
+    <input type="id" class="form" id="id" autocomplete="off" name="id" required>
+  </dir>
+  <dir style="margin: 0px 0px;">
+    <label for="pw" class="index">PW</label>
+    <input type="text" class="form" autocomplete="off" id="pw" name="pw" required>
+  </dir>
+  <br>
+  <dir style="display: flex; justify-content: center; align-items: center; padding: 0rem 0rem; margin: 0rem 0rem;">
+    <dir class="signs"><input class="sign" type="submit" value="Sign in"></input></dir>
+    <dir class="signs"><a class="sign" href="/signup">Sign up</a></dir>
+  </dir>
+</form>
+
+<%- include("./partition/foot")%>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<script src="javascripts/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('signin', { title: 'Sign in', messege: 'Welcome to Reptopia.' });
+  res.render('contact', { title: 'Sign in', messege: 'Please sign in.', category: 'contact'});
 });
 
 module.exports = router;

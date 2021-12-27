@@ -6,11 +6,11 @@
     때에 따라 그리고 싶은 스타일로 그림
   </p>
 </div>
-<div>
-  <% for(var i=1; i<13; i++){ %>
+<div class="contents">
+  <% for(var i=1; i<18; i++){ %>
     <% var str = 'images/instagram/instagram' + String(i-1) + '.jpg' %>
     <img class="photo" src= <%=str%> >
-    <% if(i%6==0) {%>
+    <% if(i%5==0) {%>
       </div><div>
     <% } %>
   <%}%>
