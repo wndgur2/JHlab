@@ -44,12 +44,15 @@ app.use('/signup', signupRouter);
 
 
 app.post('/signup', (req, res) => {
-  const newUser = new User(req.body); 
+  if(req.body["pw1"]!=req.body["pw2"])
+    res.render('signup', {messege:"Password Unmatch.", category: "contact"});
+  
+  const newUser = new User({id: req.body["id"], pw: req.body["pw1"]}); 
 
   User.find(req.body)
   .then(result => {
     if(result.length!=0)
-      res.render('signup', {messege:"Already exist id."});
+      res.render('signup', {messege:"Already exist id.", category: "contact"});
     else{
       newUser.save()
         .then(result => {
