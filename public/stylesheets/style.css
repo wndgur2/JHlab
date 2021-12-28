@@ -78,16 +78,19 @@ body {
 }
 
 .photo{
-  margin: 25px 20px;
-  max-width:12%;
-  max-height:12%;
+  margin: .3rem .5rem;
+  max-width:10rem;
+  max-height:12rem;
   width: auto;
   height: auto;
+  border-radius: 1.5rem;
   transition: 0.4s ease-in-out;
 }
 .photo:hover{
-  max-width:20%;
-  max-height:20%;
+  margin: .1rem .2rem;
+  border-radius: .4rem;
+  max-width:20rem;
+  max-height:24rem;
 }
 
 audio::-webkit-media-controls-panel{
