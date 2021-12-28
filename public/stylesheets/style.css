@@ -124,13 +124,6 @@ audio::-webkit-media-controls-panel:hover{
 
 .music{
   margin: 3rem 2rem;
-  max-width:15rem;
-  max-height:5rem;
-  transition: 0.8s ease-in-out;
-}
-.music:hover{
-  max-width:30%;
-  max-height:30%;
 }
 input, input:focus{
   background-color: #caf7e6;
@@ -138,8 +131,11 @@ input, input:focus{
   outline: none;
   margin-right: 7%;
 }
-.contents{
-  padding: 1rem 0rem;
+.m0{
+  margin: 0rm;
+}
+.p0{
+  padding: 0rm;
 }
 .form{
   width:20%;
@@ -181,6 +177,11 @@ a, a:hover{
   display: flex;
   width: 10%;
 }
+.contents{
+  display:flow-root;
+  margin: 0% 10%;
+  transition: 0.5s;
+}
 @media (min-width:992px) {
 	.navbar-toggleable-md .navbar-nav .nav-link {
 		padding-right:.2rem;
@@ -194,6 +195,6 @@ a, a:hover{
     max-height:12rem;
   }
   .photo{
-    margin: .5rem 1rem;
+    margin: 1rem 1rem;
   }
 }
