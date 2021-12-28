@@ -1,15 +1,15 @@
 <%- include("./partition/head")%>
 
 <div class="mainheading">
-  <h1 class="sitetitle">DRAWING</h1>
-  <p class="lead">
+  <h1 class="sitetitle colorchange">DRAWING</h1>
+  <p class="lead colorchange">
     때에 따라 그리고 싶은 스타일로 그림
   </p>
 </div>
 <div class="contents">
   <% for(var i=1; i<34; i++){ %>
     <% var str = 'images/instagram/instagram' + String(i-1) + '.jpg' %>
-    <img class="photo" src= <%=str%> >
+    <img class="photo" onmouseover="changeColorBlack()" onmouseout="changeColorBack()" src=<%=str%> >
     <% if(i%5==0) {%>
       </div><div>
     <% } %>
@@ -24,5 +24,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="javascripts/bootstrap.min.js"></script>
 <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+  function changeColorBlack(){
+    document.getElementById("palette").style.backgroundColor = "rgb(150, 150, 157)";
+    document.getElementsByClassName("sitetitle")[0].style.color = "rgb(220, 220, 230)";
+    document.getElementsByClassName("lead")[0].style.color = "rgb(200, 200, 210)";
+  }
+  function changeColorBack(){
+    document.getElementById("palette").style.backgroundColor = "rgb(240, 240, 245)";
+    document.getElementsByClassName("sitetitle")[0].style.color = "#292B2C";
+    document.getElementsByClassName("lead")[0].style.color = "#292B2C";
+  }
+</script>
+
 </body>
 </html>
