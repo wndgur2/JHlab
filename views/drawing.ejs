@@ -7,9 +7,10 @@
   </p>
 </div>
 <div class="contents">
+  <div>
   <% for(var i=1; i<34; i++){ %>
     <% var str = 'images/instagram/instagram' + String(i-1) + '.jpg' %>
-    <img class="photo" onmouseover="changeColorBlack()" onmouseout="changeColorBack()" src=<%=str%> >
+    <img class="photo" onmouseover= "overPhoto()" onmouseout="changeColorBack()" src=<%=str%> >
     <% if(i%5==0) {%>
       </div><div>
     <% } %>
@@ -26,12 +27,12 @@
 <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
 
 <script>
-  function changeColorBlack(){
+  function overPhoto(n){
     document.getElementById("palette").style.backgroundColor = "rgb(150, 150, 157)";
     document.getElementsByClassName("sitetitle")[0].style.color = "rgb(220, 220, 230)";
     document.getElementsByClassName("lead")[0].style.color = "rgb(200, 200, 210)";
   }
-  function changeColorBack(){
+  function changeColorBack(n){
     document.getElementById("palette").style.backgroundColor = "rgb(240, 240, 245)";
     document.getElementsByClassName("sitetitle")[0].style.color = "#292B2C";
     document.getElementsByClassName("lead")[0].style.color = "#292B2C";

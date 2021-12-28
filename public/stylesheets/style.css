@@ -86,14 +86,18 @@ body {
   transition: top 0.5s;
   height: 3rem;
   padding: .2rem .2rem;
-  background-color: rgb(187, 187, 199);
+  background-color: rgb(225, 220, 230);
+  border-style: dashed;
+  border-color: rgb(87, 86, 90);
+  border-width: 0rem;
+  border-bottom-width: .1rem;
 }
 
 .colorchange{
   transition: 0.4s ease-in-out;
 }
 .photo{
-  margin: .3rem .5rem;
+  margin: .5rem .7rem;
   min-width: 5rem;
   max-width: 5rem;
   min-height: 5rem;
@@ -118,9 +122,9 @@ audio::-webkit-media-controls-panel:hover{
 }
 
 .music{
-  margin: 25px 20px;
-  max-width:10%;
-  max-height:10%;
+  margin: 3rem 2rem;
+  max-width:15rem;
+  max-height:5rem;
   transition: 0.8s ease-in-out;
 }
 .music:hover{
