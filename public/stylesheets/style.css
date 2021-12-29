@@ -84,42 +84,44 @@ body {
 }
 
 .colorchange{
-  transition: 0.4s ease-in-out;
+  transition: 4s ease-in-out;
 }
 .photo{
-  margin: .5rem .7rem;
+  margin: .3rem .3rem;
+  padding: 0rem 0rem;
   min-width: 5rem;
-  max-width: 5rem;
+  max-width: 5rem;  
   min-height: 5rem;
   max-height: 5rem;
   border-radius: 25rem;
   transition: 0.4s ease-in-out;
 }
-.photoWrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align:middle;
-  overflow-x: hidden;
-}
 .photo:hover{
-  border-radius: .2rem;
+  margin: 0rem 0rem;
+  border-radius: .3rem;
   max-width:20rem;
   max-height:25rem;
 }
 .photoCol{
-  display:inline-table;
+  display: flex;
+  justify-self: center;
   justify-content: center;
-  vertical-align: top;
+  vertical-align: middle;
+  align-self: center;
+  align-items: center;
+}
+.contents{
+  display:inline-table;
+  margin: 0% 10%;
+  transition: 0.5s;
 }
 
 audio::-webkit-media-controls-panel{
-
-  transition: 0.8s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 audio::-webkit-media-controls-panel:hover{
   background-color: #65ee9e;
-  transition: 0.8s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .music{
@@ -177,11 +179,6 @@ a, a:hover{
   display: flex;
   width: 10%;
 }
-.contents{
-  display:flow-root;
-  margin: 0% 10%;
-  transition: 0.5s;
-}
 @media (min-width:992px) {
 	.navbar-toggleable-md .navbar-nav .nav-link {
 		padding-right:.2rem;
@@ -195,6 +192,10 @@ a, a:hover{
     max-height:12rem;
   }
   .photo{
-    margin: 1rem 1rem;
+    margin: .1rem .1rem;
+    max-width:3rem;
+    max-height:3rem;
+    min-width:3rem;
+    min-height:3rem;
   }
 }
