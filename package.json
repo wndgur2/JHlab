@@ -16,7 +16,6 @@
     "three": "^0.136.0"
   },
   "devDependencies": {
-    "node": "v16.13.0",
     "nodemon": "^2.0.15"
   }
 }
