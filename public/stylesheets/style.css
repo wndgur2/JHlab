@@ -9,6 +9,9 @@ body {
   text-align: center;
   background-color: rgb(240, 240, 245);
 }
+canvas{
+  width: 100%;
+}
 .mainheading {
 	padding: 1rem 0rem;
 }
@@ -71,13 +74,12 @@ body {
 	font-weight:700;
 	margin-bottom:1rem;
 }
-
 #navbar {
   top: 0;
   transition: top 0.5s;
   padding: .2rem .2rem;
   background-color: rgb(225, 220, 230);
-  border-style: dashed;
+  border-style: solid;
   border-color: rgb(87, 86, 90);
   border-width: 0rem;
   border-bottom-width: .1rem;
