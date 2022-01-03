@@ -6,7 +6,8 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const User = require('./models/user');
 
-var indexRouter = require('./routes/index');
+var homeRouter = require('./routes/home');
+var drawingRouter = require('./routes/drawing');
 var musicRouter = require('./routes/music');
 var reptopiaRouter = require('./routes/reptopia');
 var algorithmRouter = require('./routes/algorithm');
@@ -35,7 +36,8 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(port, (res)=>console.log("server connected.")))
   .catch(err => console.log(err));
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
+app.use('/drawing', drawingRouter);
 app.use('/music', musicRouter);
 app.use('/algorithm', algorithmRouter);
 app.use('/reptopia', reptopiaRouter);

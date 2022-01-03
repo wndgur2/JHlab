@@ -8,14 +8,15 @@
 </div>
 <div class="contents">
   <div class="photoCol">
-  <% for(var i=1; i<35; i++){ %>
-    <% var str = 'images/instagram/instagram' + String(i-1) + '.jpg' %>
-      <img class="photo" onmouseover= "overPhoto()" onmouseout="changeColorBack()" src=<%=str%> >
-    <% if(i%5==0) {%>
-      </div><div class="photoCol">
-    <% } %>
-  <%}%>
+    <% for(var i=0; i<25; i++){ %>
+      <% var str = 'images/instagram/instagram' + String(i) + '.jpg' %>
+        <% if(i%5==0 && i != 0) {%>
+          </div><div class="photoCol">
+        <% } %>
+        <img class="photo" onmouseover= "overPhoto()" onmouseout="changeColorBack()" src=<%=str%> >
+    <%}%>
   </div>
+  <input type="button" class="seeButton" id="seemore" onclick="seeMore()" value="see more">
 </div>
 
 <%- include("./partition/foot")%>
@@ -28,6 +29,7 @@
 <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
 
 <script>
+  const IMAGE_N = 34;
   function overPhoto(n){
     document.getElementById("palette").style.backgroundColor = "rgb(10, 10, 13)";
     document.getElementsByClassName("sitetitle")[0].style.color = "rgb(220, 220, 230)";
@@ -39,6 +41,26 @@
     document.getElementsByClassName("sitetitle")[0].style.color = "#292B2C";
     document.getElementsByClassName("lead")[0].style.color = "#292B2C";
     document.getElementsByClassName("contents")[0].style.margin = "0% 10%";
+  }
+  function seeMore(){
+    var contents = document.getElementsByClassName('contents')[0];
+    contents.removeChild(document.getElementById('seemore'));
+
+    for(let i=0; i<IMAGE_N-24; i++){
+      if(i%5==0) {
+        var more = document.createElement('div');
+        more.classList.add('photocol');
+        contents.appendChild(more);
+      }
+      var str = 'images/instagram/instagram' + String(i+25) + '.jpg';
+      img = document.createElement('img');
+      img.classList.add('photo');
+      img.addEventListener("mouseover", overPhoto);
+      img.addEventListener("mouseout", changeColorBack);
+      img.src = str;
+      more.appendChild(img);
+    }
+    
   }
 </script>
 
