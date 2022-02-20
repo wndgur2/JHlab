@@ -29,7 +29,7 @@
 <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
 
 <script>
-  const IMAGE_N = 34;
+  const IMAGE_N = 25;
   function overPhoto(n){
     document.getElementById("palette").style.backgroundColor = "rgb(10, 10, 13)";
     document.getElementsByClassName("sitetitle")[0].style.color = "rgb(220, 220, 230)";
@@ -45,14 +45,14 @@
   function seeMore(){
     var contents = document.getElementsByClassName('contents')[0];
     contents.removeChild(document.getElementById('seemore'));
-    const amount = 15;
-    for(let i=0; i<IMAGE_N-amount-1; i++){
+
+    for(let i=0; i<IMAGE_N-24; i++){
       if(i%5==0) {
         var more = document.createElement('div');
         more.classList.add('photocol');
         contents.appendChild(more);
       }
-      var str = 'images/instagram/instagram' + String(i+amount) + '.jpg';
+      var str = 'images/instagram/instagram' + String(i+25) + '.jpg';
       img = document.createElement('img');
       img.classList.add('photo');
       img.addEventListener("mouseover", overPhoto);
