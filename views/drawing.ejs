@@ -45,14 +45,14 @@
   function seeMore(){
     var contents = document.getElementsByClassName('contents')[0];
     contents.removeChild(document.getElementById('seemore'));
-
-    for(let i=0; i<IMAGE_N-24; i++){
+    const amount = 15;
+    for(let i=0; i<IMAGE_N-amount-1; i++){
       if(i%5==0) {
         var more = document.createElement('div');
         more.classList.add('photocol');
         contents.appendChild(more);
       }
-      var str = 'images/instagram/instagram' + String(i+25) + '.jpg';
+      var str = 'images/instagram/instagram' + String(i+amount) + '.jpg';
       img = document.createElement('img');
       img.classList.add('photo');
       img.addEventListener("mouseover", overPhoto);
