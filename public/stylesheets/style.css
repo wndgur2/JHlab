@@ -9,9 +9,6 @@ body {
   text-align: center;
   background-color: rgb(240, 240, 245);
 }
-canvas{
-  width: 100%;
-}
 .seeButton{
   display: inline-block;
   align-self: center;
@@ -149,7 +146,6 @@ audio::-webkit-media-controls-panel:hover{
   margin: 3rem 2rem;
 }
 input, input:focus{
-  background-color: #caf7e6;
   border-width:0px;
   outline: none;
   margin-right: 7%;
