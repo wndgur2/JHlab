@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //connect to mongodb
 const dbURL = "mongodb+srv://tempUser:temp123@cluster0.f5csc.mongodb.net/userData?retryWrites=true&w=majority";
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(port, (res)=>console.log("server connected.")))
