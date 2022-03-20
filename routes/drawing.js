@@ -1,8 +1,10 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('drawing', {category:"drawing"});
+  var files = fs.readdirSync('./public/images/instagram/');
+  res.render('drawing', {category:"drawing", files: files});
 });
 
 module.exports = router;

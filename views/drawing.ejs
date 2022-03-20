@@ -8,12 +8,12 @@
 </div>
 <div class="contents">
   <div class="photoCol">
-    <% for(var i=0; i<20; i++){ %>
-      <% var str = 'images/instagram/instagram' + String(i) + '.jpg' %>
+    <% for(var i=1; i<15; i++){ %>
+      <% var str = 'images/instagram/' + files[i]%>
         <% if(i%5==0 && i != 0) {%>
           </div><div class="photoCol">
         <% } %>
-        <img class="photo" onmouseover= "overPhoto()" onmouseout="changeColorBack()" src=<%=str%> >
+        <img class="photo" onmouseover="overPhoto()" onmouseout="changeColorBack()" src=<%=str%> >
     <%}%>
   </div>
   <input type="button" class="seeButton" id="seemore" onclick="seeMore()" value="see more" style="background-color: #caf7e6;">
@@ -29,11 +29,10 @@
 <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
 
 <script>
-  const IMAGE_N = 34;
   function overPhoto(n){
     document.getElementById("palette").style.backgroundColor = "rgb(10, 10, 13)";
-    document.getElementsByClassName("sitetitle")[0].style.color = "rgb(220, 220, 230)";
-    document.getElementsByClassName("lead")[0].style.color = "rgb(200, 200, 210)";
+    document.getElementsByClassName("sitetitle")[0].style.color = "rgb(215, 215, 230)";
+    document.getElementsByClassName("lead")[0].style.color = "rgb(150, 150, 210)";
     document.getElementsByClassName("contents")[0].style.margin = "0%";
   }
   function changeColorBack(n){
@@ -45,14 +44,16 @@
   function seeMore(){
     var contents = document.getElementsByClassName('contents')[0];
     contents.removeChild(document.getElementById('seemore'));
+    var files = "<%=files%>".split(',');
+    console.log(files);
 
-    for(let i=0; i<IMAGE_N-19; i++){
+    for(let i=15; i< "<%=files.length%>"; i++){
       if(i%5==0) {
         var more = document.createElement('div');
         more.classList.add('photocol');
         contents.appendChild(more);
       }
-      var str = 'images/instagram/instagram' + String(i+20) + '.jpg';
+      var str = 'images/instagram/' + files[i];
       img = document.createElement('img');
       img.classList.add('photo');
       img.addEventListener("mouseover", overPhoto);
