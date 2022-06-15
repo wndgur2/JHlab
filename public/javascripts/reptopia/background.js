@@ -102,7 +102,7 @@ function drawWave(wave){
 
   let t = frame - wave['frame'];
 
-  ctxBackground.strokeStyle = "red";
+  ctxBackground.strokeStyle = "white";
   ctxBackground.lineWidth = waveWidth - waveWidth/waveFrame * t; //시간과 두께 반비례.
 
   ctxBackground.beginPath();
