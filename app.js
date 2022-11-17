@@ -28,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //connect to mongodb
-const dbURL = "mongodb+srv://tempUser:temp123@cluster0.f5csc.mongodb.net/userData?retryWrites=true&w=majority";
+const dbURL = "mongodb://tempUser:temp123@cluster0-shard-00-00.f5csc.mongodb.net:27017,cluster0-shard-00-01.f5csc.mongodb.net:27017,cluster0-shard-00-02.f5csc.mongodb.net:27017/?ssl=true&replicaSet=atlas-tdoi7g-shard-0&authSource=admin&retryWrites=true&w=majority";
+
 const port = process.env.PORT || 3001;
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
